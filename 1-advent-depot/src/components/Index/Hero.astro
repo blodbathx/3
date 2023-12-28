@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Container from '../Container.astro';
+---
+
+<section id="Hero" class="radial-bg" style="height: 100dvh;">
+  <div class="flex h-full pt-20">
+    <Container>
+      <div class="w-full h-full flex">
+        <div class="h-fit my-auto max-w-md drop-shadow-xl max-md:px-6">
+          <img src="/images/logo.svg" alt="" class="w-full mx-auto md:px-12 lg:px-20" />
+          <h1 style="text-wrap: balance;" class="text-5xl text-center font-semibold text-white mt-4 sm:mb-48">
+            Make your process easy with us!
+          </h1>
+        </div>
+        <img class="h-full drop-shadow-2xl max-sm:hidden" src="/images/manshowing.png" alt="" />
+      </div>
+    </Container>
+  </div>
+</section>
+
+<style>
+  .radial-bg {
+    background-image: radial-gradient(circle, #ffd03a, #b57b00);
+  }
+</style>

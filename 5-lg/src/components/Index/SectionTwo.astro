@@ -1,0 +1,44 @@
+---
+import Container from '../Container.astro';
+
+const data = [
+  {
+    title: 'High Quality',
+    description: 'Unmatched Excellence in Truss Solutions.',
+    logo: 1,
+  },
+  {
+    title: 'Effienciency',
+    description: 'In everything we do we are commitment to excellence.',
+    logo: 2,
+  },
+  {
+    title: 'Skilled personnel',
+    description: 'We have the best team comprised of top professionals.',
+    logo: 3,
+  },
+];
+---
+
+<section id="Depot" class="relative overflow-hidden bg-[#0B2E59]">
+  <Container>
+    <article class="flex flex-col items-center justify-center relative z-10 gap-10 py-32">
+      <h4 class="text-5xl text-[#fff] font-bold mb-6">Different Types of Roofs</h4>
+      <div class="grid md:grid-cols-3 gap-4 lg:gap-12">
+        {
+          data.map((itm) => (
+            <div class="bg-[#f3f3f3] hover:scale-105 transition aspect-square rounded-2xl w-full h-full grid cursor-pointer overflow-hidden">
+              <header class="h-full">
+                <img class="w-full h-full object-cover" src={`/images/${itm.logo}.png`} alt="" />
+              </header>
+              <footer class="text-center w-full h-full grid place-items-center">
+                <h6 class="text-xl text-black text-center w-full font-semibold">{itm.title}</h6>
+              </footer>
+            </div>
+          ))
+        }
+      </div>
+    </article>
+  </Container>
+  <style></style>
+</section>

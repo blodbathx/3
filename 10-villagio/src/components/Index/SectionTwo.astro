@@ -1,0 +1,71 @@
+---
+import Container from '../Container.astro';
+
+const data = [
+  {
+    label: 'Secure Windows',
+    img: 'https://pellabranch-prod.gumlet.io/webres/Image/misc/2018-window-glass-option-header.jpg',
+  },
+  {
+    label: 'Get Windows Style',
+    img: 'https://ensia.com/wp-content/uploads/2013/09/article_smart_glass_main.jpg',
+  },
+  {
+    label: 'Upgrade your Windows',
+    img: 'https://img.freepik.com/foto-gratis/ventanas-edificio_1203-810.jpg',
+  },
+];
+---
+
+<section id="Windows" class="relative overflow-hidden bg-[#fff]">
+  <Container>
+    <article class="flex flex-col items-center justify-center relative z-10 gap-14 py-32" data-aos="fade-up">
+      <div class="text-center text-[#333]">
+        <h4 class="font-bold text-5xl font-sans max-w-xl mx-auto mb-4">We have a wide variety of windows for you!</h4>
+        <p class="max-w-2xl text-black/60">
+          We offer exclusively ture tehisnest intone cot dions hithout any damage igorous testing to endure the harshest
+          hurricane conditions without any damage.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4 lg:gap-[4vw] w-full">
+        {
+          data.map((itm) => (
+            <div
+              style={`background-image: url('${itm.img}')`}
+              class={`hover_info bg-[url('${itm.img}')] aspect-square w-full h-full rounded bg-cover relative`}
+            >
+              <section class="rounded bg-blue-400 bg-opacity-80 backdrop-blur uppercase text-white font-bold text-4xl p-8 text-center font-sans">
+                {itm.label}
+              </section>
+            </div>
+          ))
+        }
+      </div>
+      <div>
+        <button class="bg-blue-400 p-4 rounded-full px-6 text-white font-semibold hover:scale-105 transition"
+          >Explore more options here</button
+        >
+      </div>
+    </article>
+  </Container>
+  <style></style>
+</section>
+<style>
+  .hover_info section {
+    width: 100%;
+    transform: scale(0.7);
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease; /* Transiciones para transform y opacity */
+  }
+
+  .hover_info:hover section {
+    transform: scale(1);
+    opacity: 1;
+  }
+</style>

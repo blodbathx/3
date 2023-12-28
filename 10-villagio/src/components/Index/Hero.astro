@@ -1,0 +1,37 @@
+---
+import Container from '../Container.astro';
+---
+
+<section id="Hero" class="relative grid place-items-center bg-[#E6E7EB]" style="height: 100dvh;">
+  <img
+    src="https://pvcportico.com.ar/demo/wp-content/uploads/2023/02/galeria4.jpg"
+    class="w-full h-full object-cover absolute top-0 brightness-50"
+    alt=""
+  />
+  <Container>
+    <div class="grid place-items-center relative z-10 text-white text-center" data-aos="fade-up">
+      <h1 class="text-6xl font-bold uppercase max-w-xs mb-2">Sturdy Windows</h1>
+      <div class="max-w-lg">
+        <p class="mb-8">
+          We are a leading importer and distributor of premium exterior windows, specializing in high-quality products.
+        </p>
+        <div class="flex rounded-lg overflow-hidden">
+          <input
+            type="text"
+            id="first_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Schedule your consulation..."
+            required
+          />
+          <button class="px-4 py-3 bg-blue-400">Send</button>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .radial-bg {
+    background-image: radial-gradient(circle, #ffd03a, #b57b00);
+  }
+</style>

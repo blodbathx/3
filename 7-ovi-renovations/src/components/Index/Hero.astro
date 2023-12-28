@@ -1,0 +1,28 @@
+---
+import Container from '../Container.astro';
+---
+
+<section id="Hero" class="relative grid place-items-center bg-[#E6E7EB]" style="height: 100dvh;">
+  <img
+    src="https://img.freepik.com/vector-premium/fondo-patron-curva-moderno-blanco-abstracto-elemento-diseno-grafico_120819-1587.jpg?w=2000"
+    class="w-full h-full object-cover absolute top-0"
+    alt=""
+  />
+  <Container>
+    <div class="grid place-items-center relative z-10 text-[#2B3D60] text-center">
+      <img src="/images/image1.png" class="max-h-96" alt="" />
+      <div class="max-w-2xl">
+        <h2 class="mb-8 font-bold text-5xl">Leave your project in the hands of professionals.</h2>
+        <button class="bg-[#F1891C] text-white font-semibold rounded-full px-6 py-3 hover:scale-105 transition"
+          >Get your consulation</button
+        >
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .radial-bg {
+    background-image: radial-gradient(circle, #ffd03a, #b57b00);
+  }
+</style>
